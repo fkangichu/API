@@ -1,0 +1,22 @@
+{
+    "mongodb": "mongodb://localhost/UnBanked",
+    "crb":[
+        {
+            "ref_id":"METROPOL_CRB_KE",
+            "url":"https://api.metropol.co.ke:5555/v2_1/report/credit_info",
+            "pubic_key":"EFrdHifECEJdUfjVROheuFTqFFoTJt",
+            "private_key":"HUIIjOySPeckdztAGNJxSKcqoAiNepZnMHWVXWqMCsyFttHagqxYbAQRCYhi",
+            "country_code":"226",
+            "data_map":[
+                {
+                    "tag":"METRO_SCORE",
+                    "JSONPath":"$.metro_score_trend[0].credit_score"
+                },
+                {
+                    "tag":"DELINQUENCY",
+                    "JSONPath":"$.delinquency_code"
+                }
+            ]
+        }
+    ]
+}
